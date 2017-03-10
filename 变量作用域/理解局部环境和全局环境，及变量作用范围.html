@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+</head>
+<body>
+<script type="text/javascript">
+var color = "blue";
+function changeColor(){
+    var anotherColor = "red";
+	function swapColors(){
+	   var tempColor = anotherColor;
+	   anotherColor = color;
+	   color = tempColor;
+	 }
+	   swapColors();
+}
+      changeColor();  //理解局部环境和全局环境，及变量作用范围
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+
+</head>
+<body>
+
+<input type="button" value="click me" id="myBtn">
+
+<script type="text/javascript">
+
+var btn = document.getElementById("myBtn");
+btn.addEventListener("click",function(event){
+     alert(event.type);      
+     alert(event.target === this);   
+     alert(event.currentTarget === this);  	 
+ },false);
+//在触发DOM上的某个事件时，都会产生一个事件对象event
+
+</script>
+</body>
+</html>

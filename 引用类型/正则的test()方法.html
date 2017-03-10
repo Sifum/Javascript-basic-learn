@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+</head>
+<body>
+<script type="text/javascript">
+var re = null,
+     i;
+for (i=0; i< 10; i++){
+     re = /cat/g;
+	 alert(re.test("catastrophe"));//test()接受一个字符串参数
+}
+for (i=0; i< 10; i++){
+     re = new RegExp("cat","g");
+	 alert(re.test("catastrophe"));
+}
+</script>
+</body>
+</html>

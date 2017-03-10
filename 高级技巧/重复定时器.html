@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+</head>
+<body>
+<script type="text/javascript">
+    var c = 0;
+    function timedCount() {
+		setTimeout(function(){  
+		document.getElementById('txt').value = c;
+        c = c + 1;
+		if (c < 10 ){setTimeout(arguments.callee,1000);
+		}else{
+		   alert("done");
+		}
+		},1000);
+    }
+
+</script>
+ 
+<input type="button" value="开始计时！" onClick="timedCount()">
+<input type="text" id="txt">
+</body>
+</html>

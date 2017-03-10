@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+</head>
+<body>
+<script type="text/javascript">
+var colors = ["red", "green", "blue"];
+var colors2 = colors.concat("yellow",["black","brown"]);//从尾部添加。一层方括号数组添加会被拉平，要添加数组则需加两层方括号。
+alert(colors); //"red", "green", "blue"
+alert(colors2);//"red", "green", "blue","yellow","black","brown"
+
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+    <head>
+        <title>Sample Page</title>
+    </head>
+    <body>
+	<div>  
+       <ul>  
+        <li id="node1">节点一</li>  
+        <li id="node2">节点二</li>  
+        <li id="node3">节点三</li>  
+       </ul>  
+       <button onclick="testInsertNode()">插入节点</button>  
+      <script>  
+         var sign=0;  
+      function testInsertNode(){  
+         var node=document.getElementById("node2");   //得到node2元素
+         var insertedNode=document.createElement("li");   //创建li元素
+         insertedNode.appendChild(document.createTextNode("插入节点"+sign));  //创建文本节点和设置节点数，添加到li父节点上。 
+         node.parentNode.insertBefore(insertedNode,node.nextSibling);  //获得ul元素，在ul元素下的node2节点前插入新创建的li元素节点。
+         sign++;  
+         }  
+    </script>  
+    </body>
+</html>

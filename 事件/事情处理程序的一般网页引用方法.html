@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+
+</head>
+<body>
+
+<input type="button" value="click me" onclick="alert('Clicked')">
+<input type="button" value="click me too" onclick="alert('&quot;Clicked&quot;')"> <!--注意转义-->
+<input type="button" value="click me x2" onclick="showMessage()"><br>
+
+<form>
+     <input type="text" name="username" value="">
+	 <input type="button" value="Echo username" onclick="alert(username.value)"><br>
+	 <input type="button" value="click me x2" onclick="try{showMessage();}catch(ex){}">
+	 <!--try catch 解决用户在函数还没有解析之前就单击了按钮而引发的错误-->
+</form>
+
+<script type="text/javascript">
+function showMessage(){
+    alert("hello world");
+}
+
+</script>
+</body>
+</html>

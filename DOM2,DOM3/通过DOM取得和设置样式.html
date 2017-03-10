@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+</head>
+<body>
+<div id="myDiv">DOM操作样式</div><br>
+<div id="myDiv1" style="background-color:blue; width:100px; height:100px">取得我的样式</div>
+<script type="text/javascript">
+var div = document.getElementById("myDiv");
+div.style.backgroundColor = "red";  //注意单词大小写
+div.style.width = "100px";
+div.style.height = "100px";
+div.style.border = "1px solid black";
+
+var div1 = document.getElementById("myDiv1");
+alert(div1.style.backgroundColor+"\n"+div1.style.width+"\n"+div1.style.height);
+</script>
+</body>
+</html>

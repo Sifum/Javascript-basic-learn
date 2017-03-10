@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Sample Page</title>
+    </head>
+    <body>
+    <p id="text">Hel<span>lo W</span>orld!</p>
+	<script type="text/javascript">
+	var someNodes = document.getElementById("text");
+	    if (someNodes.nextSibling === null){
+	         alert("Last node in the parent's childNodes list.");
+	    }else if(someNodes.previousSibling === null){
+		     alert("First node in the parent's childNodes list.");
+		}else{
+			 alert(someNodes.nextSibling+someNodes.previousSibling);
+		}//访问同胞节点。
+	alert(someNodes.parentNode);
+	 </script>
+    </body>
+</html>

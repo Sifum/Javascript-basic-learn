@@ -1,0 +1,118 @@
+
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="UTF-8"> 
+<title>test javascript</title> 
+<script type="text/javascript"> 
+window.onload = function() { 
+var EventUtil = { 
+addhandler:function(element,type,handler) { 
+if(element.addEventListenter) { 
+element.addEventListenter(type,handler,false); 
+} else if (element.attachEvent) { 
+element.attachEvent("on"+type,handler); 
+} else { 
+element["on"+type] = handler; 
+} 
+}, 
+
+getEvent:function(event) { 
+return event?event:window.event; 
+}, 
+
+getTarget:function() { 
+return event.target || event.srcElement; 
+}, 
+
+preventDefault:function() { 
+if(event.preventDefault) { 
+event.preventDefault(); 
+} else { 
+event.returnValue = false; 
+} 
+}, 
+
+stopPropagation:function() { 
+if(event.stopPropagation) { 
+event.stopPropagation(); 
+} else { 
+event.cancelBuddle = true; 
+} 
+}, 
+
+removehandler:function(element,type,handler) { 
+if(element.removeEventListenter) { 
+element.addEventListenter(type,handler,false); 
+} else if (element.detachEvent) { 
+element.detachEvent("on"+type,handler); 
+} else { 
+element["on"+type] = null; 
+} 
+}, 
+
+getCharCode: function(event) { 
+if(typeof event.charCode == "number") { 
+return event.charCode; 
+} else { 
+return event.keyCode; 
+} 
+}, 
+
+getClipboardText: function(event) { 
+var clipboardData = event.clipboardData || window.clipboardData; 
+return clipboardData.getData("text"); 
+}, 
+
+setClipboardText: function(event,value) { 
+if(event.clipboardData) { 
+return event.clipboardData.setData("text/plain",value); 
+} else if(window.clipboardData){ 
+return window.clipboardData.setData("text",value); 
+} 
+} 
+
+} 
+
+var textarea = document.forms[0].elements["text"]; 
+var button = document.getElementById("button"); 
+
+
+(function() { 
+function tabForward(event) { 
+event = EventUtil.getEvent(event); 
+var target = EventUtil.getTarget(event); 
+
+if(target.value.length == target.maxLength) { 
+var form = target.parentElement; 
+
+for(var i=0,len = form.elements.length;i<len-1;i++) { 
+if(form.elements[i] == target) { 
+form.elements[i+1].focus(); 
+return ; 
+} 
+} 
+} 
+
+} 
+
+var textTel1 = document.getElementById("txtTel1"); 
+var textTel2 = document.getElementById("txtTel2"); 
+var textTel3 = document.getElementById("txtTel3"); 
+
+EventUtil.addhandler(textTel1,"keyup",tabForward); 
+EventUtil.addhandler(textTel2,"keyup",tabForward); 
+EventUtil.addhandler(textTel3,"keyup",tabForward); 
+
+})(); 
+} 
+</script> 
+</head> 
+<body> 
+<form> 
+<input type="text" name="tel1" id="txtTel1" maxlength="3" /> 
+<input type="text" name="tel2" id="txtTel2" maxlength="3" /> 
+<input type="text" name="tel3" id="txtTel3" maxlength="3" /> 
+</form> 
+</body> 
+</html>

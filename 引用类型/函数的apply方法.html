@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+</head>
+<body>
+<script type="text/javascript">
+function sum(num1, num2){
+         return num1 + num2;
+}
+function callSum1(num1, num2){
+         return sum.apply(this,arguments);
+}
+function callSum2(num1, num2){
+         return sum.apply(this,[num1,num2]); //第一个参数是作用域，第二个参数可以是数组，也可以是arguments，或者Array实例
+}
+alert(callSum1(10,10)); //20
+alert(callSum2(10,10));  //20
+</script>
+</body>
+</html>

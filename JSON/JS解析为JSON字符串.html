@@ -1,0 +1,24 @@
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+<h2>把JS对象系列化成JSON字符串</h3>
+<p>系列化成的JSON字符串:</p>
+<div id="mydiv">
+</div>
+<script type="text/javascript">
+var newbook = {
+         title:"book",
+		 authors:[
+		       "Nicholas"],
+		 edition:3,
+		 year:2015
+};
+
+var obj = JSON.stringify(newbook,["title","edition"],"--");
+//第二个参数可以是数组，也可以是函数。第三个参数用设置缩进和空白符。
+document.getElementById("mydiv").innerHTML = obj;
+</script>
+</body>
+</html>

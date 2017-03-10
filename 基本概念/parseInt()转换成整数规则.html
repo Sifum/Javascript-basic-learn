@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+</head>
+<body>
+<script type="text/javascript">
+    alert(parseInt("1234blue")); //1234
+	alert(parseInt(""));         //NaN
+	alert(parseInt("0xA"));  //10
+	alert(parseInt(22.5));    //22
+	alert(parseInt(070));    //70
+	alert(parseInt(oxf));   //15
+	alert(parseInt("oxAF",16)); 
+	alert(parseInt("AF",16));  // 由此可见指定基数可省略ox标识
+</script>
+</body>
+</html>

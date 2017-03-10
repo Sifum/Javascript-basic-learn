@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+<title>test</title>
+</head>
+<body>
+<script>
+var wroxWin = window.open("http://www.baidu.com","_self","height=400,width=400,top=10,left=10,resizable=yes");
+wroxWin.resizeTo(500,500);
+wroxWin.moveTo(100,100);
+//第一个参数是要打开的
+wroxWin.opener = null;
+//opener属性，保存着打开它的原始对象。null后就切断了两者的通信，而且是不可恢复的
+</script>
+</body>
+</html> 

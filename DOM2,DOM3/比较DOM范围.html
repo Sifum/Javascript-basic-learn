@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+
+</head>
+<body>
+
+<p id="p1"><b>hello</b>world</p>
+
+<script type="text/javascript">
+
+var range1 = document.createRange();
+var range2 = document.createRange();
+var p1 = document.getElementById("p1");
+range1.selectNodeContents(p1);
+range2.selectNodeContents(p1);
+range2.setEndBefore(p1.lastChild);
+alert(range1.compareBoundaryPoints(Range.END_TO_END,range2));    //1
+alert(range1.compareBoundaryPoints(Range.START_TO_START,range2));   //0 
+// 如果第一个范围中的点位于第二个范围中的点之前，返回-1；如果两个点相等，返回0；如果第一个范围中的点位于第二个范围中的点之后，返回1
+
+</script>
+</body>
+</html>

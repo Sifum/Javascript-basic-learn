@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+</head>
+<body>
+<script type="text/javascript">
+function outerFun()
+{
+ var a=0;
+ function innerFun()
+ {
+  a++;
+  alert(a);
+ }
+ return innerFun;  //注意这里
+}
+var obj=outerFun();
+obj();  //结果为1
+obj();  //结果为2
+var obj2=outerFun();
+obj2();  //结果为1
+obj2();  //结果为2
+	 </script>
+</body>
+</html>

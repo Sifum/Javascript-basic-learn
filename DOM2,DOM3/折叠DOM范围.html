@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+
+</head>
+<body>
+
+<p id="p1">paragraph 1</p>
+<p id="p2">paragraph 2</p>
+
+<script type="text/javascript">
+var p1 = document.getElementById("p1"),
+    p2 = document.getElementById("p2"),
+	range = document.createRange();
+range.setStartAfter(p1);
+range.setStartBefore(p2);
+alert(range.collapsed);
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="UTF-8"> 
+<title>test javascript</title> 
+<style type="text/css">
+
+</style>
+
+</head>
+<body>
+
+<form>
+<select name="location" id="selLocation">
+    <option type="radio" value="Sun,CA">Sunnyvale</option>  
+	<option type="radio" value="Los,CA">Los Angeles</option>   
+	<option type="radio" value="Mountain,CA">Mountain View</option>  <!--值为Mountain,CA -->
+	<option type="radio" value="">China</option>   <!--如果选择这项，值为空 -->
+	<option type="radio">Australia</option>   <!--值为Australia-->
+</select>
+<form>
+
+<script type="text/javascript"> 
+var selectbox = document.forms[0].elements["location"];
+var selectedOption = selectbox.options[selectbox.selectedIndex];
+alert(selectedOption.value);
+//单选框使用selectedIndex选择
+
+</script> 
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+</head>
+<body>
+<script type="text/javascript">
+var factorial = (function f(num){
+     if(num <= 1){
+	     return 1;
+	}else{
+	     return num * f(num -1);
+		 }
+	 });
+alert(factorial(3));
+</script>
+</body>
+</html>

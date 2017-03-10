@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+
+</head>
+<body>
+
+<input type="button" value="click me" id="myBtn" >
+
+<script type="text/javascript">
+
+var btn = document.getElementById("myBtn");
+btn.onclick = function(){
+	   alert(window.event.type);  //在DOM0中，event作为window的对象的一个属性存在
+};
+/*cancelBubble 相当于 stopPropagation 如：window.event.cancelBubble = true;
+ returnValue 相当于 preventDefault
+ srcElement 相当于 target
+ */
+</script>
+</body>
+</html>

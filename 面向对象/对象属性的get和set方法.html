@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+<title>test</title>
+</head>
+<body>
+<script>
+var man = {
+   name: "Minson",
+   weibo: "@Minson",
+   get age(){
+         return new Date().getFullYear()-1987;
+		 },
+   set age(val){
+         alert("Age can\'t be set to"+ val);
+		 }
+}
+alert(man.age);
+man.age = 100;
+alert(man.age);
+//man.age的设置是不成功的。因为我们在set里没有做任何事情。
+</script>
+</body>
+</html> 

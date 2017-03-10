@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+</head>
+<body>
+<script type="text/javascript">
+function Person(name,age,job){
+     this.name = name;
+	 this.age = age;
+	 this.job = job;
+	 if (typeof this.sayName != "function"){
+	     Person.prototype.sayName = function(){
+		     alert(this.name);
+			 };   //这里只在sayName（）方法不存在的情况下，才会将它添加到原型中
+		}
+	}
+	
+	var friend = new Person("Nicholas",29,"CEO");
+	friend.sayName();  //"Nicholas"
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+
+</head>
+<body>
+
+<input type="button" value="click me" id="myBtn" >
+
+<script type="text/javascript">
+
+var btn = document.getElementById("myBtn");
+btn.addEventListener("keyup",function(event){
+       alert(event.keyCode);
+},false);
+//键盘的keyup,keydown,和keypress事件，以及键盘各键码
+</script>
+</body>
+</html>

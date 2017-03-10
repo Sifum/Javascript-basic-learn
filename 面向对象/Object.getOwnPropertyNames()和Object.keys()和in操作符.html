@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+</head>
+<body>
+<script type="text/javascript">
+function Person(){}            //函数
+Person.prototype.name = "Nicholas";     //原型上设置属性和方法
+Person.prototype.age = 27;
+Person.prototype.job = "CEO";
+Person.prototype.sayName = function(){
+         alert(this.name);
+};
+
+var keys = Object.keys(Person.prototype);   //Object.keys()枚举属性方法，接受一个对象参数，返回属性的字符串数组
+alert(keys);  //"name,age,job,sayName" 
+
+var person1 = new Person();
+var person2 = new Person();
+
+alert("name"in person1); //true 说明无论属性存在于实例和原型中，in操作符都返回true。
+
+var key1 = Object.getOwnPropertyNames(Person.prototype); // Object.getOwnPropertyNames()枚举了无论它是否可枚举的所有实例属性
+alert(key1);   //"constructor,name,age,job,sayName"
+
+</script>
+</body>
+</html>

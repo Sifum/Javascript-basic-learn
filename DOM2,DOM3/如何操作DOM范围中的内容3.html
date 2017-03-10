@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+
+</head>
+<body>
+<p id="p1"><b>hello</b>world</p>
+
+<script type="text/javascript">
+var p1 = document.getElementById("p1");
+helloNode = p1.firstChild.firstChild;  
+worldNode = p1.lastChild;
+range = document.createRange();  //创建range对象
+range.setStart(helloNode,2);     //设置开始位置
+range.setEnd(worldNode,3);        //设置结束位置
+
+var fragment = range.extractContents();  //此方法会删除原来的范围，进而可以将删除的范围添加到其他地方。注意与deleteContents的区别
+p1.parentNode.appendChild(fragment);   //添加到其他的范围
+</script>
+</body>
+</html>

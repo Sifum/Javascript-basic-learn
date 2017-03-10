@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+</head>
+<body>
+<script type="text/javascript">
+var book = {};
+
+Object.defineProperties(book,{
+     _year: {
+	     value: 2004
+	},
+	 edition: {
+	     writable: true,
+	     value: 1
+	},
+	 year: {
+	     get: function(){
+		 return this._year;
+	},
+	     set: function(newValue){
+		 if (newValue > 2004) {
+		     this._year = newValue;
+			 this.edition += newValue - 2004;
+			 }
+		}
+	}
+});
+
+var descriptor = Object.getOwnPropertyDescriptor(book,"_year");  //获取对象的数据属性
+alert(descriptor.value);   //2004
+alert(descriptor.configurable);   //false
+alert(typeof descriptor.get); //undefined
+
+var descriptor = Object.getOwnPropertyDescriptor(book,"year");  //获取对象的访问器属性
+alert(descriptor.value);   //undefined
+alert(descriptor.configurable);   //false
+alert(typeof descriptor.get); //function
+</script>
+</body>
+</html>

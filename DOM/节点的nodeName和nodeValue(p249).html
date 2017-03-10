@@ -1,0 +1,17 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Sample Page</title>
+    </head>
+    <body>
+    <p id="text">Hello World!</p>
+	 <script type="text/javascript">
+	 var someNode = document.getElementById("text");
+	 if (someNode.nodeType == 1){
+	     value = someNode.nodeName;
+	     alert(value);//元素和文本节点的nodeName就是其标签名,nodeValue的值始终为null。
+		 }else{
+		 alert("It's not a Node.ATTRIBUTE_NODE")};
+	 </script>
+    </body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+</head>
+<body>
+<script type="text/javascript">
+var text = "mom and dad and baby";
+var pattern = /mom( and dad( and baby)?)?/gi;
+var matches = pattern.exec(text); //接受一个参数，即要应用模式的字符串，然后返回包含第一个匹配项信息的数组
+alert(matches.index); //exec()的一个属性index表示匹配项在字符串中的位置。
+alert(matches.input); //exec()的另一个属性input表示应用正则表达式的字符串
+</script>
+</body>
+</html>

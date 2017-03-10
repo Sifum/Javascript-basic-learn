@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head> 
+<meta charset="UTF-8"> 
+<title>test javascript</title> 
+<style type="text/css">
+
+</style>
+
+</head>
+<body>
+<p>要使用的图像：</p>
+<img id="tulip" src="http://www.w3school.com.cn/i/eg_tulip.jpg" alt="The Tulip" />
+
+<p>画布：</p>
+<canvas id="myCanvas" width="500" height="300" style="border:1px solid #d3d3d3;background:#ffffff;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+var img=document.getElementById("tulip");
+ctx.drawImage(img,30,18);   
+//可以传入9个参数：要绘制的图像，源图像的X坐标，源图像的Y坐标，源图像的宽度，源图像的高度，目标图像的X坐标，目标图像的Y坐标，目标图像的宽度，目标图像的高度。
+
+</script>
+
+</body>
+</html>

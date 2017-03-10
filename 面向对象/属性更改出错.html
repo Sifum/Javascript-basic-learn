@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+</head>
+<body>
+<script type="text/javascript">
+var person = {};
+     Object.defineProperty(person,"name",{
+	     configurable: false,
+		 value: "Nicholas"
+	});
+	   //设置数据属性后，不能再变回，否则出现错误。
+	Object.defineProperty(person,"name",{
+	     configurable: true,
+		 value: "Nicholas"
+	});
+     alert(person.name);
+</script>
+</body>
+</html>

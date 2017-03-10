@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>document.write() Example</title>
+    </head>
+    <body>
+     <div id="myDiv"></div>
+	 <script type="text/javascript">
+	 var div = document.getElementById("myDiv");
+	  div.setAttribute("id","someOtherId");
+	  div.setAttribute("class","ft");
+	  div.setAttribute("title","some other text");
+	  div.setAttribute("lang","fr");
+	  div.setAttribute("dir","rtl");
+	  alert(div.title);//设置特性getAttribute
+	  div.removeAttribute("title");
+	  alert(div.title);//彻底删除特性removeAttribute
+	 </script>
+    </body>
+</html>

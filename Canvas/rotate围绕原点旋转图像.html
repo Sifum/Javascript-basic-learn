@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head> 
+<meta charset="UTF-8"> 
+<title>test javascript</title> 
+<style type="text/css">
+
+</style>
+
+</head>
+<body>
+<canvas id="myCanvas" width="1000" height="1000">your browser does not support the canvas tag </canvas>
+
+<script type="text/javascript">
+
+var canvas=document.getElementById('myCanvas');
+if(canvas.getContext){
+      var ctx = canvas.getContext("2d");
+      ctx.beginPath();
+	  ctx.arc(100,100,99,0,2*Math.PI,false);
+      ctx.moveTo(194,100);     //没有moveTo，在0弧度位置就会形成直线连接两圆。所以用moveTo，就是不继续绘制线，只是绘制光标移至该坐标
+	  ctx.arc(100,100,94,0,2*Math.PI,false);
+	  
+	  ctx.translate(100,100);  //将坐标原点移动都x，y
+	  
+	  ctx.rotate(1);    //围绕原点旋转图像
+	  
+	  ctx.moveTo(0,0);
+	  ctx.lineTo(0,-85);
+	  ctx.moveTo(0,0);
+	  ctx.lineTo(-65,0);
+	  ctx.stroke();
+}
+</script>
+</body>
+</html>

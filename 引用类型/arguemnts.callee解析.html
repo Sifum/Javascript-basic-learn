@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+</head>
+<body>
+<script type="text/javascript">
+function factorial(num){
+   if (num <=1){
+       return 1;
+   }else{
+        return num * arguments.callee(num-1);
+	  }
+	}
+    alert(factorial(5));  //120.运算方法5*4*3*2*1，最后一个1是来自return 1
+</script>
+</body>
+</html>

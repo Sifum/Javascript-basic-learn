@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head> 
+<meta charset="UTF-8"> 
+<title>test javascript</title> 
+<style type="text/css">
+
+</style>
+
+</head>
+<body>
+<canvas id="myCanvas" width="200" height="200">your browser does not support the canvas tag </canvas>
+
+<script type="text/javascript">
+
+var canvas=document.getElementById('myCanvas');
+if(canvas.getContext){
+      var ctx = canvas.getContext('2d');
+      ctx.fillStyle = "#ff0000";
+	  ctx.fillRect(10,10,50,50);
+	  ctx.fillStyle = "rgba(0,0,255,0.5)";
+	  ctx.fillRect(30,30,50,50);
+	  
+	  ctx.strokeStyle = "#000000";
+	  ctx.strokeRect(50,50,100,100);
+	  ctx.strokeStyle = "#000000";
+	  ctx.strokeRect(80,80,200,200);
+	  
+	  //以下为canvas绘制范围创建描边
+	  ctx.strokeStyle = "#0000ff";
+	  ctx.strokeRect(0,0,200,200);
+}
+
+
+</script>
+</body>
+</html>

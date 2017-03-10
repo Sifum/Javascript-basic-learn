@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf8">
+<style type="text/css">
+
+</style>
+
+</head>
+<body>
+
+<script type="text/javascript">
+
+     function concat(str1,str2,str3){
+	  var result=str1+str2;
+	  if(typeof str3 == "string"){    //绝对不要直接（str3）
+	     result+= str3;
+	  }
+	     return result;
+     }
+
+     alert(concat(1,2,3));
+</script>
+</body>
+</html>

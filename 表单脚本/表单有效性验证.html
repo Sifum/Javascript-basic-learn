@@ -1,0 +1,49 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="UTF-8"> 
+<title>test javascript</title> 
+<style type="text/css">
+#box{
+     width:100px;
+	 height:100px;
+	 background-color:red;
+}
+</style>
+
+</head>
+<body>
+<div id="box"></div><br>
+<form method="post" action="signup.php" novalidate> <!--设置表单不进行验证--> 
+</form>
+<form> 
+     <input type="email" name="em" value="" id="emi">
+	 <input type="button" name="bu" id="but" value="检验表单">
+</form>
+<script type="text/javascript"> 
+
+var butt = document.getElementById("but");
+butt.addEventListener("click",function(){
+         var email = document.getElementById("emi");
+		 if(email.validity && !email.validity.valid){
+		     alert("please specify a value");
+		}else if(email.validity.typeMismatch){
+		     alert("please enter an email address.");
+		}else{
+		     alert("value is invalid.");
+			 }
+		},false);
+/*表单验证有checkValidity()方法，validity属性下有以下属性
+customError：如果设置了setCustomValidity（），则为true，否则返回false
+patternMismatch：如果值与指定的pattern属性不匹配，返回true
+rangOverflow：如果值比max值大，返回true
+rangUnderflow：如果值比min值小，返回true
+stepMismatch：如果min和max之间的步长值不合理，返回true
+tooLong:如果值超过maxLength属性指定的值，返回true
+typeMismatch：如果不是"mail"和"url"要求的格式，返回true
+valid:如果这里的其他属性都是false，返回true
+valueMissing:没有值，返回true
+*/
+</script> 
+</body>
+</html>

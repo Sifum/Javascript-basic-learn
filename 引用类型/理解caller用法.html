@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+</head>
+<body>
+<script type="text/javascript">
+function outer(){
+         inner();
+}
+function inner(){
+         alert(inner.caller);
+}
+outer();//function outer(){inner();} 因为caller指向的是调用当前函数的函数的引用
+</script>
+</body>
+</html>

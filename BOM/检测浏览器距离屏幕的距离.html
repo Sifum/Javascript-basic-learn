@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+<title>test</title>
+</head>
+<body>
+<script>
+var leftPos = (typeof window.screenLeft == "number")?window.screenLeft:window.screenX;  //window可改为top
+var topPos = (typeof window.screenTop == "number")?window.screenTop:window.screenY;
+alert("浏览器离屏幕左端的距离："+leftPos+"浏览器离屏幕顶端的高度："+topPos);
+</script>
+</body>
+</html> 

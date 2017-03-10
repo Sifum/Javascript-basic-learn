@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+<style type="text/css">
+*{
+margin:0;
+padding:0}
+#outer{
+     background-color:blue;
+	 width: 200px;
+	 height: 200px;
+    	 }
+#myDiv{
+     background-color:red;
+	 width: 100px;
+	 height: 100px;
+	 padding:0;
+	 margin:50px 50px;
+	 position:absolute;
+	 overflow:scroll;
+}
+</style>
+</head>
+<body>
+<div id="outer">
+<div id="myDiv" style="border:1px solid black" >DOM操作样式<br>发发发发发方法发发发发方法发发发发方法发发发发发发发发方法发发发发方法发发发发方法发发发发发发发发方法发发发发方法发发发发方法发发发发发发发发方法发发发发方法发发发发方法发发发发发发发发方法发发发发方法发发发发方法发发发</div><br>
+</div>
+<script type="text/javascript">
+var element = document.getElementById("myDiv");
+alert("偏移高度："+element.offsetHeight+" 偏移宽度："+element.offsetWidth);  //值为102，因为要加上border的宽度
+alert("客户区高度："+element.clientHeight+" 客户区宽度："+element.clientWidth); //值为83，因为要扣除滚动宽度或高度
+alert("滚动高度："+element.scrollHeight+" 滚动宽度："+element.scrollWidth);  //滚动高度：432 滚动宽度：83.
+alert("滚动高度："+element.scrollTop+" 滚动宽度："+element.scrollLeft); //值为0，可以用这两个值来确定元素当前滚动状态或者设置元素的滚动位置。没滚动状态为0，垂直滚动后，scrollTop的值就大于0，同样，水平滚动后，scrollLeft的值也会大于0
+
+
+</script>
+</body>
+</html>

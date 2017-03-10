@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+</head>
+<body>
+<script type="text/javascript">
+function Person(name,age,job){
+         this.name = name;
+		 this.age = age;
+		 this.job = job;
+		 this.friends = ["Shelley","Court"];
+}
+  //实例在构造函数中定义
+Person.prototype ={
+         constructor: Person,
+		 sayName: function(){
+		     alert(this.name);
+			 }
+		}
+	//原型中则定义congstructor和方法。
+var person1 = new Person("Shelley",29,"CEO");
+var person2 = new Person("Van",31,"Doctor");
+	
+	person1.friends.push("Count");
+	alert(person1.friends);  //"Shelley","Van","Court"
+	alert(person2.friends);   //"Shelley","Court"
+	alert(person1.friends === person2.friends); //false
+	alert(person1.sayName === person2.sayName); //true
+</script>
+</body>
+</html>

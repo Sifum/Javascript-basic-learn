@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+</head>
+<body>
+<script type="text/javascript">
+function SuperType(){
+     this.property = true;
+}
+SuperType.prototype.getSuperValue = function(){
+     return this.property;
+};
+function subType(){
+     this.subproperty = false;
+}
+SubType.prototype = new SuperType();
+
+SubType.prototype.getSubValue = funtion(){
+     return this.subproperty;
+}
+
+var instance = new SubType();
+alert(instance.getSuperValue());  //true
+</script>
+</body>
+</html>

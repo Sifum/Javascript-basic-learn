@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+</head>
+<body>
+<script type="text/javascript">
+var num = [1,2,3,4,5,4,3,2,1];
+var everyResult = num.every(function(item,index,array) { //项目，索引，数组本身
+         return (item > 2);
+		 });
+	alert(everyResult); //false，因为every只有所有是true才是true
+var someResult = num.some(function(item,index,array){
+          return (item > 2);
+		 });
+	alert(someResult); //true,因为some只有任一个true则返回true
+
+</script>
+</body>
+</html>

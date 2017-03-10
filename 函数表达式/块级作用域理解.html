@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+</head>
+<body>
+<script type="text/javascript">
+function outPutNumbers(count){
+     for (var i=0; i< count; i++){
+	     alert(i);
+	}                 //0-10计算显示
+     var i;    //重新声明变量
+	 alert(i);  //  显示undefined
+}
+//两个i是有区别的，并没有被谁覆盖的问题
+alert(outPutNumbers(10));  //0,1,2,3,4,5,6,7,8,9,10,undefined;
+</script>
+</body>
+</html>

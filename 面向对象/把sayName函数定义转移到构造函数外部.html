@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+</head>
+<body>
+<script type="text/javascript">
+function Person(name,age,job){    
+     this.name = name;     
+	 this.age = age;
+	 this.job = job;
+	 this.sayName = sayName;
+	 }
+function sayName(){
+     alert(this.name);
+	 }                   //把sayName函数定义转移到构造函数外部
+	 
+	 var person1 = new Person("Greg",27,"Doctor");
+	 var person2 = new Person("Nicholas",28,"Teacher");
+	 person1.sayName();  //"Greg"
+     person2.sayName();  //"Nicholas"
+</script>
+</body>
+</html>

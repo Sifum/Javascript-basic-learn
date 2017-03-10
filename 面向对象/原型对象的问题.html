@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+</head>
+<body>
+<script type="text/javascript">
+function Person(){
+}
+Person.prototype = {
+     constructor: Person,
+	 name: "Nicholas",
+	 age: 29,
+	 job: "CEO",
+	 friends: ["Shelley","Court"],
+	 sayName: function(){
+	     alert(this.name);
+		 }
+	};
+	
+	var person1 = new Person();
+	var person2 = new Person();
+	
+	person1.friends.push("Van");
+	
+	alert(person1.friends);  //"Shelley","Court","Van"
+	alert(person2.friends);   //"Shelley","Court","Van"
+	alert(person1.friends === person2.friends); //true   说明原型对象的问题是修改了原型后，导致所有的实例都发生了改变
+</script>
+</body>
+</html>

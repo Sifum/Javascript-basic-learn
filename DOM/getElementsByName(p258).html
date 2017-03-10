@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>document.write() Example</title>
+    </head>
+    <body>
+     <fieldset>
+	     <legend>which color do you prefer?</legend>
+		 <ul>
+		     <li><input type="radio" value="red" name="color" id="colorRed">
+			      <label for="colorRed">Red</label>
+			 <li><input type="radio" value="green" name="color" id="colorGreen">
+			      <label for="colorGreen">Green</label>
+             <li><input type="radio" value="blue" name="color" id="colorBlue">
+			      <label for="colorBlue">blue</label>				  
+	 <script type="text/javascript">
+	     var radios = document.getElementsByName("color");
+		 alert(radios);//返回的是HTMLCollection,而namedItem()只会取得第一项
+	 </script>
+    </body>
+</html>

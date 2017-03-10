@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+</head>
+<body>
+<script type="text/javascript">
+window.color = "red";
+var o = {color:"blue"};
+function sayColor(){
+     alert(this.color);
+	 }
+sayColor(); //red
+o.sayColor = sayColor;
+o.sayColor();  //blue
+</script>
+</body>
+</html>

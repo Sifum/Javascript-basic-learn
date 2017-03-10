@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+</head>
+<body>
+<script type="text/javascript">
+String.prototype.startsWith = function(text){  //这里为基本包装类型String添加原生方法
+     return this.indexOf(text) == 0;
+	 };
+var msg = "Hello World";
+alert(msg.startsWith("Hello")); //true
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+</head>
+<body>
+<script type="text/javascript">
+ var s1 = "01";
+ var s2 = "1.1";
+ var s3 = "z";
+ var s4 = false;  
+ var s5 = 1.1;
+ var s6 = {
+         value:function(){
+		    return -1;
+		}
+	};
+   alert(s1 =+ s1); //1
+   alert(s2 =+ s2);  //1.1
+   alert(s3 =+ s3);   //NaN
+   alert(s4 =+ s4);  //0
+   alert(s5 =+ s5);  //1.1
+   alert(s6 =+ s6);  //NaN
+  
+</script>
+</body>
+</html>

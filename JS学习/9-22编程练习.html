@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title> new document </title>  
+  <meta http-equiv="Content-Type" content="text/html; charset=gbk"/>   
+  <script type="text/javascript"> 
+  
+      window.onload = function(){
+                  
+     // 鼠标移动改变背景,可以通过给每行绑定鼠标移上事件和鼠标移除事件来改变所在行背景色。 
+        var aryTr = document.getElementsByTagName("tr"); 
+    	for(var i=0;i<aryTr.length;i++){
+         changeBgcolor(aryTr[i]);
+		}
+	 }
+     
+        
+      // 编写一个函数，供添加按钮调用，动态在表格的最后一行添加子节点；
+     function addNode(){
+         var objTable = document.getElementById("table");
+         var objTr = document.createElement("tr");
+         
+         var objTdNum = document.createElement("td");
+         var strNum = prompt("请输入学号","xh003");
+         if(strNum == null){
+             return;
+         }
+         while(trimStr(strNum) == ""){
+             alert("学号不能为空！");
+             var strNum = prompt("请输入学号","xh003");
+         }
+         objTdNum.innerHTML = strNum;
+         
+         var objTdName = document.createElement("td");  
+         var strName = prompt("请输入姓名","张三");
+         
+          if(strName == null){
+             return;
+         }
+         while(trimStr(strName) == ""){
+             alert("姓名不能为空！");
+             var strName = prompt("请输入姓名","张三");
+         } 
+         objTdName.innerHTML = strName;
+         
+        var objTdDelete = document.createElement("td"); 
+        
+        var objA = document.createElement("a"); 
+        objA.href="javascript:;";
+        objA.setAttribute("onClick","removeNode(this)");
+        objA.innerHTML = "删除";
+        
+        objTdDelete.appendChild(objA);
+        
+        objTr.appendChild(objTdNum);
+         objTr.appendChild(objTdName);
+         objTr.appendChild(objTdDelete);
+        objTable.appendChild(objTr);
+        
+        changeBgcolor(objTr);
+     }
+    		
+   	 
+     // 创建删除函数
+     function removeNode(obj){
+        var blnDelete = confirm("是否确认删除？");
+        if(blnDelete){
+            var objTr = obj.parentNode.parentNode;
+            objTr.parentNode.removeChild(objTr);
+        }
+        
+     }
+
+    function trimStr(str){
+        return str.replace(/(^\s*)|(\s*$)/g,"");
+    }
+    
+    function changeBgcolor(obj){
+        obj.setAttribute("onmouseover","style.background='#f2f2f2'");   
+         obj.setAttribute("onmouseout","style.background='#ffffff'");
+     }
+    
+  </script> 
+ </head> 
+ <body> 
+	   <table border="1" width="50%" id="table"  style="border-collapse:collapse">
+	   <tr>
+		<th>学号</th>
+		<th>姓名</th>
+		<th>操作</th>
+	   </tr>  
+
+	   <tr>
+		<td>xh001</td>
+		<td>王小明</td>
+		<td><a href="javascript:;" onClick="removeNode(this)">删除</a></td>   <!--在删除按钮上添加点击事件  -->
+	   </tr>
+
+	   <tr>
+		<td>xh002</td>
+		<td>刘小芳</td>
+		<td><a href="javascript:;" onClick="removeNode(this)">删除</a></td>   <!--在删除按钮上添加点击事件  -->
+	   </tr>  
+
+	   </table>
+	   <input type="button" value="添加一行" onClick="addNode()" />   <!--在添加按钮上添加点击事件  -->
+ </body>
+</html>

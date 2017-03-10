@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+</head>
+<body>
+<script type="text/javascript">
+var person = {};
+     Object.defineProperty(person,"name",{
+	     writable: false,    //设置不可写
+		 value: "Nicholas"
+	});
+	alert(person.name); //"Nicholas"
+	person.name = "Greg";
+	alert(person.name); //"Nicholas"
+     
+</script>
+</body>
+</html>

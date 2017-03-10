@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head> 
+<meta charset="UTF-8"> 
+<title>test javascript</title> 
+<style type="text/css">
+
+</style>
+
+</head>
+<body>
+<canvas id="myCanvas" width="1000" height="1000">your browser does not support the canvas tag </canvas>
+
+<script type="text/javascript">
+
+var canvas=document.getElementById('myCanvas');
+if(canvas.getContext){
+      var ctx = canvas.getContext("2d");
+      ctx.beginPath();
+	  ctx.arc(100,100,99,0,2*Math.PI,false);
+      ctx.moveTo(194,100);     //没有moveTo，在0弧度位置就会形成直线连接两圆。所以用moveTo，就是不继续绘制线，只是绘制光标移至该坐标
+	  ctx.arc(100,100,94,0,2*Math.PI,false);
+	  ctx.moveTo(100,100);
+	  ctx.lineTo(100,20);
+	  ctx.moveTo(100,100);
+	  ctx.lineTo(35,100);
+	  ctx.stroke();
+
+	  ctx.font = "bold 14px Arial";
+	  ctx.textAlign = "center";
+	  ctx.textBaseline = "middle";
+	  ctx.fillText("3",185,100);
+	  
+	  ctx.font = "bold 14px Arial";
+	  ctx.textAlign = "center";
+	  ctx.textBaseline = "middle";
+	  ctx.fillText("6",100,185);
+	  
+	  ctx.font = "bold 14px Arial";
+	  ctx.textAlign = "center";
+	  ctx.textBaseline = "middle";
+	  ctx.fillText("9",15,100);    //填充文字
+	  
+	  ctx.font = "bold 14px Arial";
+	  ctx.textAlign = "center";  //表示文本对齐方式，有start,end,center,left,right,建议使用start和end代替left和right使用
+	  ctx.textBaseline = "middle"; //表示文本的基线，值有top，hanging，middle，bottom等
+	  ctx.fillStyle = "#000000";
+	  ctx.strokeStyle = "red";
+	  ctx.strokeText("12",100,15);  //描边文字
+	 
+}
+</script>
+</body>
+</html>

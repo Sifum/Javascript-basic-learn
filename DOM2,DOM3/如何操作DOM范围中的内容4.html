@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+
+</head>
+<body>
+<p id="p1"><b>hello</b>world</p>
+
+<script type="text/javascript">
+var p1 = document.getElementById("p1");
+helloNode = p1.firstChild.firstChild;  
+worldNode = p1.lastChild;
+range = document.createRange();  //创建range对象
+range.setStart(helloNode,2);     //设置开始位置
+range.setEnd(worldNode,3);        //设置结束位置
+
+var span = document.createElement("span");   //创造一个元素
+span.style.color = "red";                     //设置元素属性
+span.appendChild(document.createTextNode("Inserted text"));    // 把文本添加到元素中
+range.insertNode(span);                    //插入节点，默认插入在范围前
+</script>
+</body>
+</html>

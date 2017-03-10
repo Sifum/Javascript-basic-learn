@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+<title>test</title>
+<style>
+
+</style>
+</head>
+<body>
+
+<div id="myDiv" class="bd user disable"></div>
+<script>
+//删除其中的user类名
+ var div = document.getElementById("myDiv");
+ var classNames = div.className.split(/\s+/); //空格分隔开成数组
+ var pos = -1,
+     i,
+	 len;
+for (i=0,len=classNames.length;i<len;i++){     //循环得到要删除类名的索引i
+         if(classNames[i] == "user"){
+		     pos = i;
+			 break;
+			 } 
+	 }            
+classNames.splice(i,1);    //1表示删除个数
+div.className = classNames.join(" ");
+
+alert(div.className);
+</script>
+</body>
+</html> 

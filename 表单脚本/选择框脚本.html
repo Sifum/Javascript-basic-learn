@@ -1,0 +1,32 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="UTF-8"> 
+<title>test javascript</title> 
+<style type="text/css">
+#box{
+     width:100px;
+	 height:100px;
+	 background-color:red;
+}
+</style>
+
+</head>
+<body>
+<form>
+<select name="location" id="selLocation">
+    <option value="Sun,CA">Sunnyvale</option>  
+	<option value="Los,CA">Los Angeles</option>   
+	<option value="Mountain,CA">Mountain View</option>  <!--值为Mountain,CA -->
+	<option value="">China</option>   <!--如果选择这项，值为空 -->
+	<option>Australia</option>   <!--值为Australia-->
+</select>
+</form>
+<script type="text/javascript"> 
+var selectbox = document.forms[0].elements["location"];
+alert(selectbox.options[0].text);
+alert(selectbox.options[0].value);
+//option的属性还有index,label,selected,text,value
+</script> 
+</body>
+</html>

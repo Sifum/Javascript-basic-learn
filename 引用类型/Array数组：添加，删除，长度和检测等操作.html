@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+</head>
+<body>
+<script type="text/javascript">
+var colors = ["red", "blue", "green"];
+alert(Array.isArray(colors)); //检测是否数组，也可用colors instanceof Array
+alert(colors[0]); //red
+colors[2] = "black"; //修改第三项
+colors[3] = "brown"; //添加第四项
+alert(colors.length); //4
+colors.length = 3; //修改长度，即删除了第四项
+alert(colors.length); //3
+colors[colors.length] = "purple"; //在尾部添加颜色。
+alert(colors[3]); //purple
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+<title>test</title>
+</head>
+<body>
+<script>
+var man = {
+   name: "Minson",
+   weibo: "@Minson",
+   $age: null,
+   get age(){
+        if (this.$age == undefined){
+		     return new Date().getFullYear()-1987;
+	     }else{
+		     return this.$age;
+			 }
+		 },
+   set age(val){
+         val = +val;
+		 if (!isNaN(val)&&val>0&&val<150){
+		     this.$age = +val;
+		}else{
+		     throw new Error("Incorrect val=" + val);
+			 }
+		 }
+}
+alert(man.age);
+man.age = 100;
+alert(man.age);
+//man.age修改成功了
+</script>
+</body>
+</html> 

@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+</head>
+<body>
+<script type="text/javascript">
+function outerFun()
+{
+ var a =0;
+ alert(a);  
+}
+var a=4;
+outerFun();  //0
+alert(a);    //4
+
+function outerFunc()
+{
+ //没有var
+ b =0;
+ alert(b);  
+}
+var b=4;
+outerFunc();  //0
+alert(b);     //0
+	 </script>
+</body>
+</html>

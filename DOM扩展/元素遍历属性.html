@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+<title>test</title>
+<style>
+#parent{
+    background-color:blue;
+	width:100px;
+	height:100px;
+}
+#show{
+    background-color:red;
+	width:100px;
+	height:100px;
+}
+</style>
+</head>
+<body>
+<div id="parent">
+<ul>
+     <li></li>
+</ul>
+</div>
+<div id="show"></div>
+<script>
+var p = document.getElementById("parent");
+var s = document.getElementById("show");
+s.innerHTML = p.childElementCount;
+//说明返回的是子元素的个数（但不包含孙辈及以后）
+/*另外还有firstElementChild:指向第一个子元素
+          lastElemntChild
+		  previousElementSibling:指向前一个同辈元素
+		  nextElementSibling
+*/
+</script>
+</body>
+</html> 

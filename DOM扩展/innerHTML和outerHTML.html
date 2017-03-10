@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+<title>test</title>
+<style>
+
+</style>
+</head>
+<body>
+<div id="content"></div>
+<div id="content1">
+         <p>This is a <strong>Paragraph</strong> with a list following it.</p>
+		 <ul>
+		     <li>Item 1</li>
+			 <li>Item 2</li>
+			 <li>Item 3</li>
+			 <li>Item 4</li>
+		 </ul>
+</div>
+<script>
+var div = document.getElementById("content");
+div.innerHTML = "<p>This is a <strong>Paragraph</strong> with a list following it.</p>";//自动添加属性标签效果，如果只想得到字符串，要转义。
+//还有并不是所有标签都支持innerHTML,如frameset就不支持
+
+var div1 = document.getElementById("content1");
+div1.outerHTML = "<P>This is a paragraph</p>";  //原来的div中的所有子元素就被outerHTML所替换了
+</script>
+</body>
+</html> 

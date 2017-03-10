@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+    <head>
+        <title>Sample Page</title>
+		<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+    </head>
+    <body>
+	<div id="nodeD">  
+       <ul id="nodeU">  
+        <li id="node1">节点一</li>  
+        <li id="node2">节点二</li>  
+        <li id="node3">节点三</li>  
+       </ul>  
+	 </div>
+       <button onclick="testInsertNode()">插入节点</button>   
+      <script type="text/javascript">
+          $(document).ready(function(){
+          $("button").bind("click",function(){
+          $("#nodeD").append($("ul").clone());
+             });
+           });
+    </script>  
+    </body>
+</html>

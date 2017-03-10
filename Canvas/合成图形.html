@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head> 
+<meta charset="UTF-8"> 
+<title>test javascript</title> 
+<style type="text/css">
+
+</style>
+
+</head>
+<body>
+
+<p>画布：</p>
+<canvas id="myCanvas" width="500" height="300" style="border:1px solid #d3d3d3;background:#ffffff;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+var gradient = ctx.createRadialGradient(55,55,10,55,55,30);//起点圆心x，y，半径和终点圆心x，y，半径
+    gradient.addColorStop(0,"white");  //0表示开始颜色，1表示结束颜色
+	gradient.addColorStop(1,"black");
+	
+	ctx.globalAlpha = 0.8;   //设置全局透明度
+	
+	ctx.fillStyle = "#ff0000";
+	ctx.fillRect(10,10,50,50);
+	
+	ctx.globalCompositeOperation = "destination-over";  //表示后绘制的图像位于先绘制的图形的下方
+	//更多属性值交P462
+	ctx.fillStyle = gradient;
+	ctx.fillRect(30,30,50,50);
+
+    
+</script>
+
+</body>
+</html>

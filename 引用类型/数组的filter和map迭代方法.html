@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+</head>
+<body>
+<script type="text/javascript">
+var num = [1,2,3,4,5,4,3,2,1];
+var filterResult = num.filter(function(item,index,array) { //项目，索引，数组本身
+         return (item > 2);
+		 });
+	alert(filterResult); //返回由true项组成的数组
+var mapResult = num.map(function(item,index,array){
+          return (item * 2);
+		 });
+	alert(mapResult); //返回计算后的结果数组
+
+</script>
+</body>
+</html>

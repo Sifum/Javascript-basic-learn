@@ -1,0 +1,15 @@
+<html>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+    <head>
+        <title>Sample Page</title>
+		<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+    </head>
+    <body>
+	<p>说明documentElement始终指向html</P>
+   <script type="text/javascript">
+     var html = document.documentElement;//取得<html>元素
+	 alert(html == document.childNodes[0]);
+	 alert(html == document.firstChild);
+</script> 
+    </body>
+</html>

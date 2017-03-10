@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+</head>
+<body>
+<script type="text/javascript">
+function factorial (num) {
+     if (num < 1){
+	     return 1;
+	 }else{
+	     return num * factorial(num-1);
+	}
+}    //这是一个经典的递归乘阶函数
+
+/*问题在于
+var anotherFactorial = factorial;
+factorial = null;
+alert(anotherFactorial(4));  这个将出错，因为factorial不在是函数了。
+*/
+</script>
+</body>
+</html>

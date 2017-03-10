@@ -1,0 +1,31 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="UTF-8"> 
+<title>test javascript</title> 
+<style type="text/css">
+#box{
+     width:100px;
+	 height:100px;
+	 background-color:red;
+}
+</style>
+
+</head>
+<body>
+<div id="box"></div><br>
+<form> 
+<input type="text" name="te" id="txtTel1" maxlength="3" required><br>  <!--为必填项目 -->
+<input type="email" name="em" id="txtTel2" maxlength="3" ><br>    <!--必要输入-@-格式 -->
+<input type="url" name="ur" id="txtTel3" maxlength="3" ><br>      <!--必须输入url-->
+<input type="number" min="0" max="100" step="5" name="nu" id="txtTel3" maxlength="3" ><br>  
+<!--最小的可能值，最大的可能值，和从min到max的两个刻度间的差值,这里数字范围在0-100，5的倍数
+有stepUp()和stepDown方法如：input.stepUp(5);-->
+<input type="text" pattern="\d+" name="count"><br>  <!--正则表达式，用于匹配文本框中的值 -->
+<input type="button" name="bu" value="提交">
+</form>
+<script type="text/javascript"> 
+
+</script> 
+</body>
+</html>

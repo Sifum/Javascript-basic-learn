@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+</head>
+<body>
+<script type="text/javascript">
+var time = new Date();
+var    a = time.toDateString();
+ alert(a);  //返回的日期格式为：星期，月，日，年。
+var    b = time.toTimeString();
+ alert(b);  //返回的日期格式为：时，分，秒，时区
+var    c = time.toLocaleDateString();
+ alert(c);  //返回的日期格式因地区而异 如2015/2/20
+var    d = time.toLocaleTimeString();
+ alert(d);  //返回的日期格式因地区而异 如下午4:20:20
+var    e = time.toUTCString();
+ alert(e);  //返回的日期格式为：星期，日，月，年，时，分，秒等。
+</script>
+</body>
+</html>

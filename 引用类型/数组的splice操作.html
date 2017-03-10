@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+</head>
+<body>
+<script type="text/javascript">
+var colors = ["red", "green", "blue", "yellow", "purple"];
+var removed = colors.splice(0,1); //第一项，删除一个。
+alert(colors);
+alert(removed); //red,说明返回的是删除的那一项。
+var inserted = colors.splice(1,0,"black", "white");//第二项，删除0个，插入"black", "white"
+alert(colors);
+alert(inserted); //返回空字符串。因为要删除0项
+</script>
+</body>
+</html>

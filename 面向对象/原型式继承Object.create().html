@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+</head>
+<body>
+<script type="text/javascript">
+var person = {
+     name: "Nicholas",
+	 friends: ["Shellby","Court","Van"]
+};
+
+var anotherPerson = Object.create(person);      //原型式继承Object.create()第一个参数用作新对象原型的对象（可选） ，另一个为新对象定义额外属性的对象
+anotherPerson.name = "Greg";
+anotherPerson.friends.push("Rob");
+
+alert(person.friends);    //"Shellby","Court","Van","Greg"
+</script>
+</body>
+</html>

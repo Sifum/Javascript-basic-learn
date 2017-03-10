@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+<title>test</title>
+</head>
+<body>
+<script>
+var blocked = false;
+try {
+     var wroxWin = window.open("http://www.baidu.com","_blank");  //网址最好加上http
+	 if(wroxWin == null){
+	     blocked == true;
+	}
+}catch(ex){
+     blocked = true;
+}
+if(blocked){
+     alert("The popup was blocked");
+}
+</script>
+</body>
+</html> 

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+<title>test</title>
+</head>
+<body>
+<script>
+function  foo(){
+     Object.defineProperty(foo.prototype,'z',
+	 {get:function(){
+	         return 1;
+			 }
+		}
+	 )};
+var obj = new foo();
+alert(obj.z);    // 1
+obj.z = 10;
+alert(obj.z);    // 1
+//在原型上设置的get方法用obj。z是修改不成功的
+
+function foo1(){};
+Object.defineProperty(foo1,"num",{configurable: true,value: 100});
+var obj1 = new foo1();
+alert(foo1.num);    
+delete foo1.num;   //设置了configurable后删除成功
+alert(foo1.num);    //undefined
+
+</script>
+</body>
+</html> 

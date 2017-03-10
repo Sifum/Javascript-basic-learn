@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+</head>
+<body>
+<script type="text/javascript">
+function Person(){}            //函数
+Person.prototype.name = "Nicholas";     //原型上设置属性和方法
+Person.prototype.age = 27;
+Person.prototype.job = "CEO";
+Person.prototype.sayName = function(){
+         alert(this.name);
+};
+//新对象的属性和方法都由所有实例所共享
+var person1 = new Person();
+
+var person2 = new Person();
+
+person1.name = "Greg";
+alert(person1.name); //"Greg",来自实例
+alert(person2.name); //"Nicholas",来自原型
+alert(person1.hasOwnProperty("name")); //true
+alert(person2.hasOwnProperty("name")); //false
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+<title>test</title>
+<style>
+
+</style>
+</head>
+<body>
+
+<div id="myDiv" class="bd user disable"></div>
+<script>
+//删除其中的user类名
+ var div = document.getElementById("myDiv");
+ if (div.classList.contains("bd")){    
+     div.classList.remove("bd");
+	 }
+alert(div.className);
+/*还有div.classList.add()增加
+      div.classList.toggle()意为如果列表中存在这个类名则删除，不存在则添加
+	  */
+</script>
+</body>
+</html> 

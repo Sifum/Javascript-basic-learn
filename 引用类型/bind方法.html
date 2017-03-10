@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf8">
+<style type="text/css">
+
+</style>
+
+</head>
+<body>
+
+<script type="text/javascript">
+function add(a,b,c){
+     return a+b+c;
+}
+
+var func = add.bind(undefined,100); //将会绑定a为100
+alert(func(1,2));   //103=100+1+2
+var func2 = func.bind(undefined,200);  //将会绑定b为200
+alert(func2(10));  //310=100+200+10
+</script>
+</body>
+</html>

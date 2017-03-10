@@ -1,0 +1,17 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>document.write() Example</title>
+    </head>
+    <body>
+     <div id="myDiv" class="bd" title="Body text" lang="en" dir="ltr" data-my_special="hello!"></div>
+	 <script type="text/javascript">
+	 var div = document.getElementById("myDiv");
+	   alert(div.getAttribute("id"));
+	   alert(div.getAttribute("class"));
+	   alert(div.getAttribute("lang"));
+	   alert(div.getAttribute("dir"));//取得特性
+	   alert(div.getAttribute("data-my_special"));//取得自定义特性,HTML建议加上data-前缀
+	 </script>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+</head>
+<body>
+<script type="text/javascript">
+(function(){
+     var now = new Date();
+	 if (now.getMonth() == 0 && now.getDate() == 1){
+	     alert("happy new year!");
+	}else{
+	     alert("happy everyday!");
+	}
+  }
+)();   //通过把函数声明转换为表达式，创建私用作用域，每个开发人员可以可使用自己的变量，而不用担心搞乱作用域
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+</head>
+<body>
+<script type="text/javascript">
+function SuperType(name){
+     this.name = name;
+	 this.age = ["red","blue","green"];
+}
+
+SuperType.prototype.sayName = function(){
+     alert(this.name);
+};
+function SubType(name,age){
+     SuperType.call(this,name);
+	 this.age = age;
+}
+
+SubType.prototype = new SuperType();
+SubType.prototype.constructor = SubType;
+SubType.prototype.sayAge = function(){
+     alert(this.age);
+};
+var a = new SubType("Greg",27);
+alert(a.name);
+var b = new SubType("Nicholas",29);
+alert(b.name);
+</script>
+</body>
+</html>

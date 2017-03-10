@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+<title>test</title>
+</head>
+<body>
+
+<script>
+function hasIEPlugin(name){
+     try{
+	     new ActiveXObject(name);
+	 }catch(ex){
+	     return false;
+	}
+}
+alert(hasIEPlugin("Flash"));
+alert(hasIEPlugin("QuickTime.QuickTime"));  //IE中检测插件
+</script>
+</body>
+</html> 

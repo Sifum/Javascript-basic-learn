@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+</head>
+<body>
+<script type="text/javascript">
+var person = {
+     name: "Nicholas",
+	 friends: ["Shellby","Court","Van"]
+};
+
+var anotherPerson = Object.create(person,{      //原型式继承Object.create()的第二个参数设置了属性后会覆盖原型对象上的同名属性
+     name:{
+	     value: "Greg"
+	}
+});
+alert(anotherPerson.name);   //"Greg"
+</script>
+</body>
+</html>

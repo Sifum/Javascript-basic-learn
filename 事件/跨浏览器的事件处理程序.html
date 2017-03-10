@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+
+</head>
+<body>
+
+<input type="button" value="click me" id="myBtn">
+
+<script type="text/javascript">
+
+var btn = document.getElementById("myBtn");
+var handler = function(){
+         alert("hello world");};
+
+var EventUtil = {
+     addHandler : function(element,type,handler){
+	     if(element.addEventListener){
+		     element.addEventListener(type,handler,false);
+		}else if(element.attachEvent){
+		     element.attachEvent("on"+type,handler);
+		}else{
+		     element["on"+type] = handler;
+		}
+	 },
+	 removeHandler: function(element,type,handler){
+	     if(element.removeEventListener){
+		     element.removeEventListener(type,handler,false);
+		}else if(element.detachEvent){
+		     element.detachEvent("on"+type,handler);
+		}else{
+		     element["on"+type] = null;
+		}
+	 },
+};
+
+EventUtil.addHandler(btn,"click",handler);
+//删除用EventUtil.removeHandler(btn,"click",handler);
+
+
+</script>
+</body>
+</html>

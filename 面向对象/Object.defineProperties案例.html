@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+<title>test</title>
+</head>
+<body>
+<script>
+var person ={};
+Object.defineProperties(person,{
+     title:{value: "fe",emumerable:true},
+	 corp:{value:"baba",enumerable:true},
+	 salary:{value:5000,enumerable:true,writable:true},
+	 luck:{
+	     get:function(){
+		 return Math.random() >0.5? "good":"bad";
+		 }
+	},
+	promote:{
+	     set:function(level){
+		     this.salary *=1 + level*0.1;
+			 }
+		}
+   });
+   var money = Object.getOwnPropertyDescriptor(person,"salary");
+   alert(money.value); //5000
+   person.promote = 2;
+   alert(person.salary);  //6000
+</script>
+</body>
+</html> 

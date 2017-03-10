@@ -1,0 +1,17 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Sample Page</title>
+    </head>
+    <body>
+    <p id="text">Hel<span>lo W</span>orld!</p>
+	 <script type="text/javascript">
+	 var someNode = document.getElementById("text");
+	 if (someNode.nodeType == 1){
+	    var arrayOfNodes = Array.prototype.slice.call(someNode.childNodes,0);
+	     alert(arrayOfNodes);//"[object Text],[object HTMLSpanElement],[object Text]",将NodeList对象转换为数组。
+		 }else{
+		 alert("It's not a Node.ELEMENT_NODE")};
+	 </script>
+    </body>
+</html>

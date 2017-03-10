@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head> 
+<meta charset="UTF-8"> 
+<title>test javascript</title> 
+<style type="text/css">
+
+</style>
+
+</head>
+<body>
+<canvas id="myCanvas" width="1000" height="1000">your browser does not support the canvas tag </canvas>
+
+<script type="text/javascript">
+
+var canvas=document.getElementById('myCanvas');
+if(canvas.getContext){
+      var ctx = canvas.getContext("2d");
+     
+	  ctx.fillStyle = "#ff0000";  //红色
+	  ctx.save(); //如果你知道将来还要返回某组属性和变换的组合，可以调用save（）方法
+	  
+	  ctx.fillStyle = "#00ff00";  //绿色
+	  ctx.translate(100,100);
+	  ctx.save();  
+	 
+	  ctx.fillStyle = "#0000ff";   //蓝色
+	  ctx.fillRect(0,0,100,200);
+	  
+	  ctx.restore();               //返回一层，至绿色
+	  ctx.fillRect(10,10,100,200);
+	  
+	  ctx.restore();              //返回一层，至红色
+	  ctx.fillRect(0,0,100,200);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+<title>test</title>
+</head>
+<body>
+<script>
+var num = 0;
+var max = 10;
+
+function incrementNumber(){
+         num++;
+		 if(num < max){
+		 setTimeout(incrementNumber,500);
+		 }else{
+		 alert("Done");
+		 }
+     }
+setTimeout(incrementNumber,500);
+
+
+</script>
+</body>
+</html> 

@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf8">
+<style type="text/css">
+
+</style>
+
+</head>
+<body>
+
+<script type="text/javascript">
+//通信错误最常见的就是将数据发送给服务器之前，没有进行编码
+function addQueryStringArg(url,name,value){
+     if(url.indexOf("?") == -1){
+	     url +="?";
+	}else{
+	     url +="&";
+	}
+	url += encodeURIComponent(name) +"=" +encodeURIComponent(value);
+	return url;
+	}
+var url = "http://www.somedomain.com";
+var newUrl = addQueryStringArg(url,"redir","http://www.someotherdomain.com?a=b&c=d");
+alert(newUrl);
+</script>
+</body>
+</html>

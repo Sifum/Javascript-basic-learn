@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+</head>
+<body>
+<script type="text/javascript">
+function createFunctions(){
+     var result = new Array();
+	 for (i=0;i<10;i++){
+	     result[i]= function(){
+		     return i;
+		};
+	}
+	 return result;
+}
+
+alert(createFunctions()); //返回以下结果，说明并没有返回我们想要的1-10效果，而是每次都返回i。
+/* function (){
+		     return i;
+		},function (){
+		     return i;
+		},function (){
+		     return i;
+		},function (){
+		     return i;
+		},function (){
+		     return i;
+		},function (){
+		     return i;
+		},function (){
+		     return i;
+		},function (){
+		     return i;
+		},function (){
+		     return i;
+		},function (){
+		     return i;
+		}
+		*/
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+    <head>
+        <title>Sample Page</title>
+		<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+    </head>
+    <body>
+	<div id="nodeD">  
+       <ul id="nodeU">  
+        <li id="node1">节点 一</li>  
+        <li id="node2">节点 二</li>  
+        <li id="node3">节点 三</li>  
+        </ul>	   
+	 </div>
+       <button onclick="testInsertNode()">插入节点</button>   
+   <script type="text/javascript">
+       function testInsertNode(){
+            var nodeli = document.getElementById('nodeU');//得到ul元素
+            var newUl = nodeli.cloneNode(true);//深度克隆ul元素
+            var nodeul = document.getElementsByTagName('ul')[0];//获取第一个UL节点
+            var nodeli1 = nodeul.getElementsByTagName('li')[2];//获取ul下第3个节点——秋天
+            nodeul.insertBefore(newUl,nodeli1);//函数insertBefore()表示在哪个节点前添加。第一个参数为要插入的新节点，第二个参数为已有节点
+}
+</script> 
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+</head>
+<body>
+<script type="text/javascript">
+function Person(){} 
+var friend = new Person(); // 下面重写整个原型对象          
+Person.prototype = {
+     constructor: Person,
+     name: "Nicholas",
+	 age: 28,
+	 job: "CEO",
+	 sayName: function(){
+	 alert(this.name);
+	 }
+};
+   friend.sayName();   //error 把原型修改为另外一个对象就等于切断了构造函数与最初原型之间的练习。实例中的指针仅指向原型，而不指向构造函数
+   </script>
+</body>
+</html>

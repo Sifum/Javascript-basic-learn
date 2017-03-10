@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript">
+//正则.test(内容)，返回true或false
+function t1(){
+ var con = document.getElementsByName('content')[0].value;//需要查找的内容
+ var reg = /hi/;//需要匹配的内容
+ alert(reg.test(con));
+}
+//正则.exec(内容)，返回匹配的内容
+function t2(){
+ var con = document.getElementsByName('content')[0].value;//需要查找的内容
+ var reg = /\bhi\w+/;//需要匹配的内容
+ alert(reg.exec(con));
+}
+</script>
+</head>
+<body>
+<textarea rows="5" cols="30" name="content"></textarea><br />
+<button onclick="t1();">正则测试(test函数)</button><br />
+<button onclick="t2();">正则测试(exec函数)</button>
+</body>
+</html>
+

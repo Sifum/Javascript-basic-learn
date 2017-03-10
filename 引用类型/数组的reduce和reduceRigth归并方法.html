@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+</head>
+<body>
+<script type="text/javascript">
+var num = [1,2,3,4,5,4,3,2,1];
+var reduceResult = num.reduce(function(prev, cur, index, array) { //前一值，当前值，索引，数组本身
+         return prev + cur;
+		 });
+	alert(reduceResult); // 25。
+var reduceRightResult = num.reduceRight(function(prev, cur, index, array) { //前一值，当前值，索引，数组本身
+         return prev + cur;
+		 });
+	alert(reduceRightResult); // 25。 reduce和reduceRight归并方法只是前者从前开始，后者从尾部向前的区别。
+
+</script>
+</body>
+</html>

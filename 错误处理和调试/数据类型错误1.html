@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf8">
+<style type="text/css">
+
+</style>
+
+</head>
+<body>
+
+<script type="text/javascript">
+
+function reverseSort(values){
+     if(values instanceof Array){   //尽量用typeof和instanceof检测
+	     values.sort();
+		 values.reverse();
+		 }
+		 return values;      //别忘记return语句
+	}
+
+alert(reverseSort([2,4,8,9,45]));
+</script>
+</body>
+</html>

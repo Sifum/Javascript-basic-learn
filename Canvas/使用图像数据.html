@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head> 
+<meta charset="UTF-8"> 
+<title>test javascript</title> 
+<style type="text/css">
+
+</style>
+
+</head>
+<body>
+<p>要使用的图像：</p>
+<img id="tulip" src="http://b.hiphotos.baidu.com/zhidao/wh%3D600%2C800/sign=c6e39fbb242dd42a5f5c09ad330b778d/dbb44aed2e738bd4a2d578e3a08b87d6267ff968.jpg" width="150" height="150" alt="The Tulip" />
+
+<p>画布：</p>
+<canvas id="myCanvas" width="1000" height="1000" style="border:1px solid #d3d3d3;background:#ffffff;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+var img=document.getElementById("tulip");
+var imageData,data,i,len,average,red,green,blue,alpha;
+
+ctx.drawImage(img,0,0);
+imageData = ctx.getImageData(0,0,img.width,img.height);  //取得数据的画面区域的x和y，以及该区域的像素的宽度和高度
+data = imageData.data;
+for (i=0,len=data.length;i<len;i+=4){
+      red = data[i];
+	  green = data[i+1];
+	  blue = data[i+2];
+	  alpha = data[i+3];
+	  
+	  average = Math.floor((red+green+blue)/3);
+	  data[i] = average;
+	  data[i+1] = average;
+	  data[i+2] = average;
+	  }
+imageData.data = data;
+ctx.putImageData(imageData,0,0);
+</script>
+
+</body>
+</html>

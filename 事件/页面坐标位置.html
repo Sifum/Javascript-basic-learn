@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+
+</head>
+<body>
+
+<input type="button" value="click me" id="myBtn" >
+
+<script type="text/javascript">
+
+var btn = document.getElementById("myBtn");
+btn.addEventListener("click",function(event){
+         alert(event.pageX+"\n"+event.pageY+"\n"+event.clientX+"\n"+event.clientY);
+},false);
+//page代表的是鼠标光标在页面中的位置，没有滚动情况下两对值相等，IE不支持page ，P371
+</script>
+</body>
+</html>

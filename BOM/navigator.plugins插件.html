@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+<title>test</title>
+</head>
+<body>
+
+<script>
+function hasPlugin(name){
+     name = name.toLowerCase();
+	 for (var i =0;i< navigator.plugins.length; i++){ //navigator.plugins表示浏览器插件
+	     if(navigator.plugins[i].name.toLowerCase().indexOf(name) > -1){
+		 //这里检测了插件名中是否包含参数name
+		     return true;
+			 }
+		 }
+		 return false;
+	 }
+alert(hasPlugin("Flash"));
+alert(hasPlugin("QuickTime"));
+//此方法不适合ie
+</script>
+</body>
+</html> 

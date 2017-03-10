@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+<style type="text/css">
+#myForm ul{
+     list-style-type:none;
+}
+</style>
+</head>
+<body>
+
+<form method="post" id="myForm">
+     <ul>
+	     <li><input type="radio" name="color" value="red" disable>Red</li>
+         <li><input type="radio" name="color" value="green">Green</li>
+		 <li><input type="radio" name="color" value="blue">Blue</li>
+     </ul>
+	 <input type="submit" value="submit" id="inp"><br>
+	 <input type="text" value="submit" id="text">
+</form>
+
+<script type="text/javascript">
+var form = document.getElementById("myForm");
+var colorFields = form.elements["color"];
+var inp = document.getElementById("inp");
+var text = document.getElementById("text");
+alert(colorFields.length);  //3
+
+var firstColorField = colorFields[0];
+var firstFormField = form.elements[0];
+alert(firstColorField == firstFormField);   //true
+inp.disabled = true;    //使表单只读
+text.readOnly = true;   //使文本不可删除
+//其他表单字段属性有from,name,readOnly,tabIndex,type,value
+</script>
+</body>
+</html>

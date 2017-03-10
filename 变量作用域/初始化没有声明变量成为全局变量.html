@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+</head>
+<body>
+<script type="text/javascript">
+function test(a,b) {
+       c = a+b;
+	   return c;
+	 }
+	var conclusion = test(10,20);
+	alert(conclusion);
+	alert(c); //在函数内省略了var，所以c成为了全局变量。
+	
+function add(num1,num2) {
+        var sum = sum1 + sum2;
+		return sum;
+	}
+	var result = add(10,20);
+	alert(result);
+	alert(sum);  //由于sum是局部变量，所以此处会导致错误
+</script>
+</body>
+</html>

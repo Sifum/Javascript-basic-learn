@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+
+</head>
+<body>
+<p id="p1"><b>hello</b>world</p>
+
+<script type="text/javascript">
+var p1 = document.getElementById("p1");
+helloNode = p1.firstChild.firstChild;  
+
+range = document.createRange();
+
+range.selectNode(helloNode);  // 选择节点范围
+
+var span = document.createElement("span");  //创建元素
+span.style.backgroundColor = "yellow";    //设置元素属性
+range.surroundContents(span);            //环绕范围插入内容 
+//直接效果就是给范围选区加上了一个黄色背景
+</script>
+</body>
+</html>

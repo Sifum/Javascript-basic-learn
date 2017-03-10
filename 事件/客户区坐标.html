@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+
+</head>
+<body>
+
+<input type="button" value="click me" id="myBtn" >
+
+<script type="text/javascript">
+
+var btn = document.getElementById("myBtn");
+btn.addEventListener("click",function(event){
+         alert(event.clientX+"\n"+event.clientY);
+},false);
+//表示事件发生时鼠标指针在视口中的水平和垂直坐标
+</script>
+</body>
+</html>

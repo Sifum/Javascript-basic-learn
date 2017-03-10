@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+</head>
+<body>
+<script type="text/javascript">
+function createFunctions(){
+     var result = new Array();
+	 for (i=0;i<10;i++){
+	     result[i]= function(num){
+		     return function(){
+			     return num;
+			};
+		}(i);
+	}
+	 return result;
+}
+
+alert(createFunctions());   //不在返回i，而是返回了num
+/*
+function (){
+			     return num;
+			},function (){
+			     return num;
+			},function (){
+			     return num;
+			},function (){
+			     return num;
+			},function (){
+			     return num;
+			},function (){
+			     return num;
+			},function (){
+			     return num;
+			},function (){
+			     return num;
+			},function (){
+			     return num;
+			},function (){
+			     return num;
+			}
+*/
+</script>
+</body>
+</html>

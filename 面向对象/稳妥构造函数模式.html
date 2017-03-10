@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+</head>
+<body>
+<script type="text/javascript">
+function Person(name,age,job){
+    var o = new Object();
+	o.sayName = function(){
+	     alert(name);      //没有this
+	};
+	return o;
+}
+
+var friend = Person("Nicholas",29,"CEO");  //没有new
+friend.sayName();
+</script>
+</body>
+</html>

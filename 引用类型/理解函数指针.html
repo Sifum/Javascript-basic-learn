@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+</head>
+<body>
+<script type="text/javascript">
+function sum(num1, num2){
+         return num1+num2;
+}
+     alert(sum(10,10)); //20
+var anotherSum = sum;
+     alert(anotherSum(10,10));  //20
+sum = null;
+alert(anotherSum(10,10)); //20 。即使sum设置为null，anotherSum的计算结果不变，说明函数名仅仅是指向函数的指针。
+</script>
+</body>
+</html>

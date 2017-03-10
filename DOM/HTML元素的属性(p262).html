@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>document.write() Example</title>
+    </head>
+    <body>
+     <div id="myDiv" class="bd" title="Body text" lang="en" dir="ltr"></div>
+	 <script type="text/javascript">
+	 var div = document.getElementById("myDiv");
+	   alert(div.id);
+	   alert(div.className);
+	   alert(div.title);
+	   alert(div.lang);
+	   alert(div.dir);//HTML元素的属性
+	   div.id = "someOtherId";
+	   div.className = "ft";
+	   div.title = "Some other text";
+	   div.lang = "fr";
+	   div.dir = "rtl";//修改HTML元素的属性
+	 </script>
+    </body>
+</html>

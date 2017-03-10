@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+</head>
+<body>
+<script type="text/javascript">
+var name = "The Window";
+var object = {
+     name: "My Object",
+	 getName: function(){
+		     return this.name;
+	}
+};
+alert(object.getName());   //My object
+alert((object.getName)());    //My object
+alert((object.getName = object.getName)());   //"The Window",在非严格模式下
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+<style type="text/css">
+#myDiv{
+     background-color:red;
+	 width: 100px;
+	 height: 100px;
+}
+</style>
+</head>
+<body>
+<div id="myDiv" style="border:1px solid black">DOM操作样式</div><br>
+<script type="text/javascript">
+var div = document.getElementById("myDiv");
+var computedStyle = document.defaultView.getComputedStyle(div,null);//第二个参数是一个伪类字符串，或者null
+
+alert(computedStyle.backgroundColor);  //rgb格式显示
+alert(computedStyle.width);
+alert(computedStyle.height);
+alert(computedStyle.border);  //显示因浏览器而异
+//ie不支持，但可用currentStyle用法：var computedStyle = div.currentStyle
+</script>
+</body>
+</html>

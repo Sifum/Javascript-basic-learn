@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+
+</head>
+<body>
+
+<input type="button" value="click me" id="myBtn" >
+
+<script type="text/javascript">
+
+var btn = document.getElementById("myBtn");
+btn.onclick = function(event){
+         alert("clicked");
+		 event.stopPropagation();   //阻止了事件冒泡或者捕获，导致之后的事件不再执行
+};
+/*不同了阻止默认行为event.preventDefault(),它会阻止比如像超链接跳转等行为。
+link。onclick = function(event){
+         event.preventDefault();
+}; */
+document.body.onclick = function(event){
+         alert("body clicked");
+};
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+</head>
+<body>
+<script type="text/javascript">
+function Person(){}            
+Person.prototype = {
+     name: "Nicholas",
+	 age: 28,
+	 job: "CEO",
+	 sayName: function(){
+	 alert(this.name);
+	 }
+};
+    var friend  = new Person();
+	alert(friend.constructor == Person); //false
+	alert(friend.constructor == Object); //true
+	//说明constructor属性不再指向了Person，如果想继续指向，则在Person。prototype下写入：constructor: Person
+	 </script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sample</title>
+</head>
+<body>
+<script type="text/javascript">
+var obj1 = new Object();
+var obj2 = obj1;
+ obj1.name = "Nicholas";
+alert(obj2.name);//"Nicholas",说明引用类型复制后得到了指针，两者指向同一个对象。
+</script>
+</body>
+</html>

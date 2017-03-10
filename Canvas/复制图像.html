@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+#mydiv{
+	margin-top:20px;
+}
+</style>
+</head>
+
+<body>
+<canvas id="canvas" width="200" height="200">
+不支持canvas。
+</canvas>
+<p>复制后的图像如下：</p>
+<div id="mydiv">
+</div>
+<script type="text/javascript">
+var drawing = document.getElementById("canvas");
+var context = drawing.getContext("2d");
+context.fillStyle = "#ff0000";
+context.strokeStyle = "#000";
+context.fillRect(0,0,200,200);
+context.strokeRect(0,0,200,200);
+context.fillStyle = "#fff";
+context.font = "bold 14px Arial";
+context.fillText("Hello world",60,100);
+var img = drawing.toDataURL("image/jpeg");
+var image = document.createElement("img");
+image.src = img;
+var div = document.getElementById("mydiv");
+div.appendChild(image);
+</script>
+</body>
+</html>
